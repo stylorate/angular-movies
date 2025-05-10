@@ -1,0 +1,22 @@
+<div>Lista de peliculas</div>
+@if (movies.length == 0) {
+  <div class="alert alert-warning">No hay registros en el sistema!</div>
+} @else {
+  <div class="movie-container">
+    @for (movieChunk of moviesChunked; track $index) {
+      <div class="movie-row">
+        @for (movie of movieChunk; track $index) {
+          <div class="movie-card">
+            <img [src]="movie.url" alt="{{ movie.name }}" />
+            <div class="movie-info">
+              <h4>{{ movie.name }}</h4>
+              <p>{{ movie.genre }}</p>
+              <span class="rating">{{ movie.movieScore }}</span>
+            </div>
+            <div class="p-3">{{ movie.name }}</div>
+          </div>
+        }
+      </div>
+    }
+  </div>
+}
