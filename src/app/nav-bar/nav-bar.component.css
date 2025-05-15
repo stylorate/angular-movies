@@ -1,0 +1,67 @@
+.navbar {
+  position: flex;
+  width: 100%;
+  margin-bottom: 2rem;
+  justify-content: space-between;
+  gap: 10rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: yellow;
+}
+
+.nav-left {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.nav-right {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.nav-right input {
+  padding: 0.5rem;
+  border-radius: 100px;
+  border: none;
+}
+
+/* Botones nav */
+.nav-btn {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.nav-btn.red {
+  background-color: #e50914;
+}
+
+/* Filtros */
+.filters {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.filter {
+  background: #222;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.filter.active {
+  background: #2ecc71;
+}

@@ -1,14 +1,16 @@
-<nav class="navbar bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand">Navbar</a>
-    <form class="d-flex" role="search">
-      <input
-        class="form-control me-2"
-        type="search"
-        placeholder="Search"
-        aria-label="Search"
-      />
-      <button class="btn btn-outline-success" type="submit">Search</button>
-    </form>
+<nav class="navbar">
+  <div class="nav-left">
+    <span class="logo">🎬 MovieBrowser</span>
+    <input type="text" placeholder="Search by movie title" />
+  </div>
+  <div class="nav-right">
+    <button class="nav-btn">Movies</button>
+    <button class="nav-btn red">Sign In</button>
   </div>
 </nav>
+<div class="filters">
+  <button class="filter active">Popular</button>
+  <button class="filter">Now Playing</button>
+  <button class="filter">Top Rated</button>
+  <button class="filter">Upcoming</button>
+</div>
