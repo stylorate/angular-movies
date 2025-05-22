@@ -1,3 +1,29 @@
+$bold: bold;
+$yellow: yellow;
+$white: white;
+
+.display-flex {
+  display: flex;
+}
+
+.display-flex-row {
+  @extend .display-flex;
+  flex-direction: row;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.border-none {
+  border: none;
+}
+
+.border-none-cursor-pointer {
+  @extend .border-none;
+  @extend .cursor-pointer;
+}
+
 .navbar {
   position: flex;
   width: 100%;
@@ -8,20 +34,18 @@
 
 .logo {
   font-size: 1.5rem;
-  font-weight: bold;
-  color: yellow;
+  font-weight: $bold;
+  color: $yellow;
 }
 
 .nav-left {
-  display: flex;
-  flex-direction: row;
+  @extend .display-flex-row;
   justify-content: flex-start;
   gap: 1rem;
 }
 
 .nav-right {
-  display: flex;
-  flex-direction: row;
+  @extend .display-flex-row;
   justify-content: flex-end;
   gap: 1rem;
 }
@@ -29,37 +53,34 @@
 .nav-right input {
   padding: 0.5rem;
   border-radius: 100px;
-  border: none;
+  @extend .border-none;
 }
 
-/* Botones nav */
 .nav-btn {
   background-color: #333;
-  color: white;
-  border: none;
+  color: $white;
   padding: 0.5rem 1rem;
   border-radius: 4px;
-  cursor: pointer;
+  @extend .border-none-cursor-pointer;
 }
 
-.nav-btn.red {
+.red {
   background-color: #e50914;
 }
 
 /* Filtros */
 .filters {
-  display: flex;
+  @extend .display-flex;
   gap: 1rem;
   margin-bottom: 2rem;
 }
 
 .filter {
   background: #222;
-  color: white;
-  border: none;
+  color: $white;
   padding: 0.5rem 1rem;
   border-radius: 20px;
-  cursor: pointer;
+  @extend .border-none-cursor-pointer;
 }
 
 .filter.active {

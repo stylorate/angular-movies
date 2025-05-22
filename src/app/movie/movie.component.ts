@@ -6,7 +6,7 @@ import { Movie } from '../models/movie';
   standalone: true,
   imports: [],
   templateUrl: './movie.component.html',
-  styleUrl: './movie.component.css',
+  styleUrl: './movie.component.scss',
 })
 export class MovieComponent implements OnInit {
   @Input() movies: Movie[] = [];

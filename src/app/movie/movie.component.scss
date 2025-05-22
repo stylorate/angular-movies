@@ -1,0 +1,49 @@
+$displayFlex: flex;
+$relative: relative;
+$absolute: absolute;
+$tenPx: 10px;
+
+.movie-container {
+  display: $displayFlex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  .movie-row {
+    display: $displayFlex;
+    gap: 1rem;
+    justify-content: center;
+    .movie-card {
+      background-color: #111;
+      border-radius: 8px;
+      width: 170px;
+      color: white;
+      text-align: center;
+      overflow: hidden;
+      position: $relative;
+      img {
+        width: 100%;
+        height: 250px;
+        object-fit: contain;
+        border-bottom: 2px solid #333;
+        background: #222;
+      }
+      .movie-info {
+        padding: $tenPx;
+
+        .rating {
+          background-color: #333;
+          color: gold;
+          padding: 2px 6px;
+          border-radius: 12px;
+          position: $absolute;
+          bottom: $tenPx;
+          right: $tenPx;
+          font-size: 0.8rem;
+        }
+      }
+    }
+    .movie-card:hover {
+      transform: scale(1.05);
+    }
+  }
+}

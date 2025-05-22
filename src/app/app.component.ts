@@ -10,7 +10,7 @@ import { MovieComponent } from './movie/movie.component';
   standalone: true,
   imports: [RouterOutlet, NavBarComponent, MovieComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
+  styleUrl: './app.component.scss',
 })
 export class AppComponent implements OnInit {
   title = 'angular-movies';
